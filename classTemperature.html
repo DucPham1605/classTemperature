@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function(c){
+        this.c = c;
+
+        this.convertToF = function () {
+            return (this.c * 9/5) + 32;
+        }
+        this.convertToK = function () {
+            return parseFloat(this.c) + 273.15;
+        }
+    }
+
+    let temp = prompt('Mời bạn nhập nhiệt dộ C để chuyển đổi');
+    let temperature = new Temperature(temp);
+    let f = temperature.convertToF();
+    let k = temperature.convertToK();
+    alert(temp + ' độ C tương ứng với ' + f + ' độ F ' + ' và ' + k + ' độ K ');
+</script>
+</body>
+</html>
